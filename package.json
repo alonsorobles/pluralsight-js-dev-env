@@ -2,8 +2,7 @@
   "name": "pluralsight-js-dev-env",
   "version": "0.0.1",
   "description": "JavaScript development environment Pluralsight course by Cory House",
-  "scripts": {
-  },
+  "scripts": {},
   "author": "Alonso Robles",
   "license": "MIT",
   "dependencies": {
