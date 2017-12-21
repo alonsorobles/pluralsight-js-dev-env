@@ -1,5 +1,8 @@
-#mock API data
+# Mock API data
 src/api/db.json
+
+# Production Build
+dist
 
 # Logs
 logs
