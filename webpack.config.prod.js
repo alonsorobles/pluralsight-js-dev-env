@@ -3,6 +3,7 @@ import webpack from "webpack";
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import WebpackMd5Hash from 'webpack-md5-hash';
 import ExtractTextPlugin from 'extract-text-webpack-plugin';
+import fs from 'fs';
 
 export default {
   debug: true,
@@ -31,6 +32,7 @@ export default {
     // Create HTML file that includes reference to bundled JS
     new HtmlWebpackPlugin({
       template: 'src/index.html',
+      favicon: fs.existsSync('src/favicon.ico') ? 'src/favicon.ico' : '',
       minify: {
         removeComments: true,
         collapseWhitespace: true,
