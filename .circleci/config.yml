@@ -25,4 +25,4 @@ jobs:
           command: npm run ci-build
       - run:
           name: docker-build
-          command: npm docker-build
+          command: npm run docker-build
