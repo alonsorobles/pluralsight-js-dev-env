@@ -6,26 +6,26 @@ jobs:
     steps:
       - checkout
       - run:
-        name: update-npm
-        command: 'sudo npm install -g npm@latest'
+          name: update-npm
+          command: 'sudo npm install -g npm@latest'
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
-        name: install-npm
-        command: npm install
+          name: install-npm
+          command: npm install
       - save_cache:
-        key: dependency-cache-{{ checksum "package.json" }}
-        paths:
-          - ./node_modules
+          key: dependency-cache-{{ checksum "package.json" }}
+          paths:
+            - ./node_modules
       - run:
-        name: security-check
-        command: npm run security-check
+          name: security-check
+          command: npm run security-check
       - run:
-        name: test
-        command: npm test
+          name: test
+          command: npm test
       - run:
-        name: build
-        command: npm run ci-build
+          name: build
+          command: npm run ci-build
       - run:
-        name: docker-build
-        command: npm docker-build
+          name: docker-build
+          command: npm docker-build
