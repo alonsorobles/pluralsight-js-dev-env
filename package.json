@@ -20,7 +20,10 @@
     "prebuild": "npm-run-all clean-dist test lint",
     "build": "babel-node build/build.js",
     "postbuild": "babel-node build/distServer.js",
-    "deploy": "surge ./dist"
+    "deploy": "surge ./dist",
+    "dockerbuild": "docker build -t pluralsight-js-dev-env .",
+    "preci-build": "npm-run-all clean-dist test lint",
+    "ci-build": "babel-node build/build.js"
   },
   "author": "Alonso Robles",
   "license": "MIT",
